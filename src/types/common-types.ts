@@ -1,0 +1,27 @@
+export type FileType = | "pdf" | "xlsx";
+
+export interface IOption {
+    label: string;
+    value: any;
+}
+
+export type AccountType = "SAVING" | "CURRENT";
+
+export type StatusType = "ACTIVE" | "INACTIVE" | "DELETED";
+
+export type BranchType = "HEAD_OFFICE" | "BRANCH";
+
+export interface ObjectType {[key: string]: any};
+
+export interface BankAccount {
+  bankAccountNo: number;
+  ifscCode: string;
+  accountHolderName: string;
+  accountType: AccountType;
+}
+
+export interface IEmployeeStats {
+  active: number;
+  inactive: number;
+  deleted: number;
+}

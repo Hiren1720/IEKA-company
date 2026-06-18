@@ -1,0 +1,64 @@
+.topbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+}
+.topbar .topbarinner {
+    padding: 0 25px;
+}
+.topbar .title .pagename {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #000;
+}
+.topbar .title_parts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+}
+
+ .filterparts .all_events  {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ .all_events .exelicon, .all_events .searchicon {
+    width: 30px;
+    cursor: pointer;
+}
+.all_events .searchicon i {
+    font-size: 18px;
+    color: #406ccb;
+}
+.all_events .exelicon img{
+    width: 100%;
+}
+.filterparts .closebtn {
+ font-size: 23px;
+    background-color: #ffe8e8;
+    padding: 0 10px;
+    color: #ff6f6f;
+     transition: all 0.2s ease;
+}
+.filterparts .closebtn:hover {
+    color: #e45757;
+}
+
+.buttoncommon{
+   font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5px 15px;
+    color: #fff;
+    text-align: center;
+    background-color: #406ccb;
+     transition: all 0.2s ease;
+     margin-top: 0;
+}
+ .buttoncommon:hover {
+    color: #fff;
+    background-color: #2a51a7;
+}
