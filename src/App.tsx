@@ -17,6 +17,9 @@ import AddShift from "./components/company/organization/shift/AddShift";
 import DepartmentPage from "./pages/company/organization/department";
 import AddDepartmentPage from "./pages/company/organization/department/AddDepartment";
 import NotFoundPage from "./pages/not-found";
+import DesignationPage from "./pages/company/organization/designation";
+import LeavePage from "./pages/company/organization/leave";
+import HolidaysPage from "./pages/company/organization/holidays";
 
 function App() {
   return (
@@ -76,6 +79,9 @@ function App() {
             <Route path={pathNames.ADD_SHIFT} element={<AddShift />} />
             <Route path={pathNames.DEPARTMENT} element={<DepartmentPage />} />
             <Route path={pathNames.ADD_DEPARTMENT} element={<AddDepartmentPage />} />
+            <Route path={pathNames.DESIGNATION} element={<DesignationPage />} />
+            <Route path={pathNames.LEAVE} element={<LeavePage />} />
+            <Route path={pathNames.HOLIDAYS} element={<HolidaysPage />} />
           </Route>
 
           <Route path="my-profile" element={<MyProfilePage />} />

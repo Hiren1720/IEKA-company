@@ -6,6 +6,7 @@ interface StatCardProps {
   icon: React.ReactNode;
   active?: boolean;
   activeColor?: string;
+  textColor?: string;
   onClick?: () => void;
 }
 
@@ -15,12 +16,13 @@ const StatCard: React.FC<StatCardProps> = ({
   icon,
   active = false,
   activeColor = "#007bff",
+  textColor = "text-secondary",
   onClick,
 }) => {
   return (
     <div
       onClick={onClick}
-      style={active ? { backgroundColor: activeColor } : undefined}
+      // style={active ? { backgroundColor: activeColor } : undefined}
       className={`
         min-w-[140px]
         cursor-pointer
@@ -30,18 +32,19 @@ const StatCard: React.FC<StatCardProps> = ({
         transition-all
         duration-200
         hover:-translate-y-[5px]
-        ${active ? "text-white" : "bg-cardBg"}
+        ${active ? activeColor : "bg-cardBg"}
       `}
     >
       <div className="flex items-center justify-between">
         <div
-          className="
+          className={`
             flex min-w-[35px] items-center justify-center
             bg-white px-[5px] py-[2px]
-            text-[20px] font-medium text-[#333]
+            text-[20px] font-medium text-secondary
             shadow-[rgba(50,50,93,0.25)_0px_13px_27px_-5px,rgba(0,0,0,0.3)_0px_8px_16px_-8px]
-          "
-          style={{ color: activeColor }}
+            ${textColor}
+          `}
+          // style={{ color: activeColor }}
         >
           {count}
         </div>

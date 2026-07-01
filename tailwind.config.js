@@ -34,6 +34,8 @@ module.exports = {
         placeholder: "#aaaaaa",
         link: "#4E72F8",
         error: "#ff4d4f",
+        disabledBg: "#f5f5f5",
+        disabledText: "#999",
 
         /* Button */
         "btn-primary": "#4483df",

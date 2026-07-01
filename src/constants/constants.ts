@@ -24,7 +24,7 @@ export const pathNames = {
   COMPANY_HIERARCHY: "/organization/company-hierarchy",
   PEOPLE_HIERARCHY: "/organization/people-hierarchy",
   LEAVE: "/organization/leave",
-  HOLIDAY: "/organization/holiday",
+  HOLIDAYS: "/organization/holidays",
   POLICY_CONFIGURATION: "/organization/policy-configuration",
 
   // Workforce
@@ -123,8 +123,8 @@ export const menuItems: MenuItem[] = [
         path: pathNames.LEAVE,
       },
       {
-        label: "Holiday",
-        path: pathNames.HOLIDAY,
+        label: "Holidays",
+        path: pathNames.HOLIDAYS,
       },
       {
         label: "Policy Configuration",
@@ -278,6 +278,14 @@ export const branchEnum: {
   BRANCH: "BRANCH"
 }
 
+export const leaveTypeEnum: {
+  PAID: "PAID";
+  UNPAID: "UNPAID";
+} = {
+  PAID: "PAID",
+  UNPAID: "UNPAID",
+}
+
 export const branch: ObjectType = {
   HEAD_OFFICE: "Head Office",
   BRANCH: "Branch Office"
@@ -308,6 +316,18 @@ export const accountOptions: IOption[] = [
     value: bankAccountEnum.CURRENT,
   },
 ];
+
+export const leaveTypeOptions: IOption[] = [
+  {
+    label: leaveTypeEnum.PAID,
+    value: leaveTypeEnum.PAID,
+  },
+  {
+    label: leaveTypeEnum.UNPAID,
+    value: leaveTypeEnum.UNPAID,
+  },
+];
+
 
 export const accountStatusOptions: IOption[] = [
   {

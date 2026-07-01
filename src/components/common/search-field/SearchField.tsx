@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   icon?: React.ReactNode;
   required?: boolean;
+  onSearch: (value: string) => void;
 }
 
-const TextField: React.FC<InputProps> = ({
+const SearchField: React.FC<InputProps> = ({
   label,
   error,
   icon,
   className = "",
   required,
+  onSearch,
   ...props
 }) => {
+  const searchTimeout = useRef<NodeJS.Timeout | null>(null);
+
+  const [search, setSearch] = useState("");
+
+  const handleSearchChange = (value: string) => {
+    setSearch(value);
+
+    if (searchTimeout.current) {
+      clearTimeout(searchTimeout.current);
+    }
+
+    searchTimeout.current = setTimeout(() => {
+      onSearch(value);
+    }, 500);
+  };
+
   return (
     <div>
       {label && (
@@ -26,6 +44,8 @@ const TextField: React.FC<InputProps> = ({
       <div className="group relative">
         <input
           {...props}
+          onChange={(e) => handleSearchChange(e.target.value)}
+          value={search}
           className={`
             w-full
             border border-inputBorder
@@ -72,11 +92,9 @@ const TextField: React.FC<InputProps> = ({
         )}
       </div>
 
-      {error && (
-        <p className="mt-1 text-xs text-error">{error}</p>
-      )}
+      {error && <p className="mt-1 text-xs text-error">{error}</p>}
     </div>
   );
 };
 
-export default TextField;
+export default SearchField;
