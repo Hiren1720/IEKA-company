@@ -74,11 +74,11 @@ function App() {
           
           {/* Organization */}
           <Route path={pathNames.ORGANIZATION}>
-            <Route path={pathNames.BRANCH} element={<BranchPage />} />
-            <Route path={pathNames.SHIFT} element={<ShiftPage />} />
-            <Route path={pathNames.ADD_SHIFT} element={<AddShift />} />
-            <Route path={pathNames.DEPARTMENT} element={<DepartmentPage />} />
-            <Route path={pathNames.ADD_DEPARTMENT} element={<AddDepartmentPage />} />
+            <Route path={pathNames.BRANCH} element={<BranchPage  />} />
+            <Route path={pathNames.SHIFT} element={<ShiftPage  />} />
+            <Route path={pathNames.ADD_SHIFT} element={<AddShift  />} />
+            <Route path={pathNames.DEPARTMENT} element={<DepartmentPage />}  />
+            <Route path={pathNames.ADD_DEPARTMENT} element={<AddDepartmentPage />}  />
             <Route path={pathNames.DESIGNATION} element={<DesignationPage />} />
             <Route path={pathNames.LEAVE} element={<LeavePage />} />
             <Route path={pathNames.HOLIDAYS} element={<HolidaysPage />} />
