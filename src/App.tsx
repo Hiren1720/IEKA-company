@@ -29,6 +29,7 @@ import EmployeeDetailsPage from "./pages/company/workforce/onboarding/EmployeeDe
 import AssignRolesResponsibilityPage from "./pages/company/workforce/onboarding/AssignRolesResponsibility";
 import PolicyConfigurationPage from "./pages/company/organization/policy-configuration";
 import AddPolicyPage from "./pages/company/organization/policy-configuration/AddPolicy";
+import AllEmployeesPage from "./pages/company/workforce/all-employee";
 
 function App() {
   return (
@@ -99,6 +100,8 @@ function App() {
             <Route path={pathNames.ONBOARDING} element={<OnBoardingPage />} />
             <Route path={pathNames.EMPLOYEE_DETAILS} element={<EmployeeDetailsPage />}/>
             <Route path={pathNames.ASSIGN_ROLES_RESPONSIBILITY} element={<AssignRolesResponsibilityPage />}/>
+
+            <Route path={pathNames.ALL_EMPLOYEES} element={<AllEmployeesPage />}/>
           </Route>
 
           <Route path={pathNames.PAY_SLIP}>
