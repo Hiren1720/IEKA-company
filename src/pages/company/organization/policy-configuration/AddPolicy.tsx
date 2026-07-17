@@ -1,4 +1,4 @@
-import AddPolicy from "../../../../components/company/organization/policy-configuration/AddPolicy"
+import AddPolicy from "../../../../components/company/organization/policy-configuration/add-policy/AddPolicy"
 
 const AddPolicyPage = () => {
     return <AddPolicy/>

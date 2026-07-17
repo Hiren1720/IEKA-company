@@ -20,8 +20,8 @@ export const addPolicy = (payload: {
     showSuccessToast: true,
   });
 
-export const getPolicyById = (holidayId: string) => {
-  return apiRequest.get<ApiResponse>(`/organization/holidays/${holidayId}`);
+export const getPolicyById = (policyId: string) => {
+  return apiRequest.get<ApiResponse>(`/organization/policy/${policyId}`);
 };
 
 export const updatePolicy = (

@@ -107,3 +107,23 @@ export enum GenderEnum {
   FEMALE = "female",
   OTHER = "other",
 }
+
+export enum leaveEncashmentType {
+  YEARLY = "YEARLY",
+  FULL_FINAL = "FULL_FINAL",
+}
+
+export enum WeeklyOffEnum {
+  MONDAY = "MONDAY",
+  TUESDAY = "TUESDAY",
+  WEDNESDAY = "WEDNESDAY",
+  THURSDAY = "THURSDAY",
+  FRIDAY = "FRIDAY",
+  SATURDAY = "SATURDAY",
+  FIRST_SATURDAY = "1stSATURDAY",
+  SECOND_SATURDAY = "2ndSATURDAY",
+  THIRD_SATURDAY = "3rdSATURDAY",
+  FOURTH_SATURDAY = "4thSATURDAY",
+  FIFTH_SATURDAY = "5thSATURDAY",
+  SUNDAY = "SUNDAY",
+}

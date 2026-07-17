@@ -154,14 +154,12 @@ const Policy = () => {
   };
 
   // handle edit holiday details
-  const handleEditPolicyDetails = async (holiday: IPolicy) => {
-    setLoading(true);
-    const response = await getPolicyById(holiday._id);
-    if (response?.success) {
-      handleOnAddOpenClose();
-      setPolicy(response?.data);
-    }
-    setLoading(false);
+  const handleEditPolicyDetails = async (policy: IPolicy) => {
+    navigate(pathNames.ADD_POLICY, {
+      state: {
+        id: policy._id
+      }
+    })
   };
 
   // handle status open close

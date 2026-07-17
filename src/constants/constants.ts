@@ -1,4 +1,4 @@
-import { documentEnum, employeeDocuments, EmploymentTypeEnum, IOption, ObjectType, RoleEnum, statusEnum, ValueType } from "../types/common-types";
+import { documentEnum, employeeDocuments, EmploymentTypeEnum, IOption, leaveEncashmentType, ObjectType, RoleEnum, statusEnum, ValueType } from "../types/common-types";
 import { MenuItem } from "../types/sidebar-types";
 
 export const storageKeys = {
@@ -409,6 +409,17 @@ export const accountStatusOptions: IOption[] = [
   {
     label: statusMessage.INACTIVE,
     value: statusEnum.INACTIVE,
+  },
+];
+
+export const leavePeriodOptions = [
+  {
+    label: "Yearly",
+    value: leaveEncashmentType.YEARLY,
+  },
+  {
+    label: "Full and Final only",
+    value: leaveEncashmentType.FULL_FINAL,
   },
 ];
 
